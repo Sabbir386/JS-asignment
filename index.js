@@ -1,12 +1,12 @@
  /*JS Project*/
- function mindGame(num){
-    if(typeof num!=='number' || num<0 ){
+ function mindGame(number){
+    if(typeof number!=='number' || number<0 ){
         return 'Input Should be a Positive Number';
     }
-    num=(((num*3+10)/2)-5);
-    return num;
+    number=(((number*3+10)/2)-5);
+    return number;
  }
-//  console.log(mindGame(3));
+//   console.log(mindGame(33));
 
 function evenOdd(text){
     if(typeof text!=='string'){
@@ -16,4 +16,15 @@ function evenOdd(text){
     return ( (totalLength&1) ? 'odd' : 'even');
     
 }
-// console.log(evenOdd('10101'));
+ //console.log(evenOdd('chatgpt'));hhdfhhsdfhsdhfhsdhfjdsgfjsdhfhhdshfgsdhfhsdfhsdfdsfhfh
+
+ function isLGSeven(number){
+    if(typeof number!=='number'){
+        return 'Input Should be a Number';
+    }
+    let difference=(number-7);
+    return ( difference<0 ? difference : (number*2) );
+
+ }
+ console.log(isLGSeven(-15));
+ 
