@@ -38,6 +38,7 @@ The following Function will give an result
  
  /* The following Function will give an result
   which 'total number of badData'*/
+
 function findingBadData(array){
     const arrayValidation=Array.isArray(array);
     let elementValidation=true;
@@ -61,6 +62,7 @@ function findingBadData(array){
 
 /*The following Function will convert gems to diamond and
  give result total number of diamond which we will get.*/
+
 function gemsToDiamond(friendOneGems,friendTwoGems,friendThreeGems){
     if( typeof friendOneGems!=='number' || typeof friendTwoGems!=='number' || typeof friendThreeGems!=='number'){
         return 'Input Should be a Number';
@@ -72,5 +74,5 @@ function gemsToDiamond(friendOneGems,friendTwoGems,friendThreeGems){
     let friendTwoDiamond=friendTwoGems*friendTwoGemsPower;
     let friendThreeDiamond=friendThreeGems*friendThreeGemsPower;
     let totalDiamond=friendOneDiamond+friendTwoDiamond+friendThreeDiamond;
-    return ( (totalDiamond<2000) ? totalDiamond : (totalDiamond-2000) );
+    return ( (totalDiamond<=2000) ? totalDiamond : (totalDiamond-2000) );
 }
