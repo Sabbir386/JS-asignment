@@ -1,4 +1,7 @@
- /*JS Project*/
+/*
+The following Function will give an result 
+which is 'mindGame number'
+*/
  function mindGame(number){
     if(typeof number!=='number' || number<0 ){
         return 'Input Should be a Positive Number';
@@ -6,8 +9,11 @@
     number=(((number*3+10)/2)-5);
     return number;
  }
-//   console.log(mindGame(33));
 
+/*
+The following Function will give an result
+ which is 'even' or 'odd'
+*/
 function evenOdd(text){
     if(typeof text!=='string'){
         return 'Input Should be a String';
@@ -16,8 +22,11 @@ function evenOdd(text){
     return ( (totalLength&1) ? 'odd' : 'even' );
     
 }
- //console.log(evenOdd('chatgpt'));hhdfhhsdfhsdhfhsdhfjdsgfjsdhfhhdshfgsdhfhsdfhsdfdsfhfh
 
+/*
+The following Function will give an result 
+'which is less than seven or greater than seven'
+*/
  function isLGSeven(number){
     if(typeof number!=='number'){
         return 'Input Should be a Number';
@@ -26,13 +35,14 @@ function evenOdd(text){
     return ( difference<0 ? difference : (number*2) );
 
  }
-//  console.log(isLGSeven(-15));
  
+ /* The following Function will give an result
+  which 'total number of badData'*/
 function findingBadData(array){
     const arrayValidation=Array.isArray(array);
     let elementValidation=true;
     let totalBadData=0;
-    for(element of array){
+    for(element of array){  
         if(element<0)totalBadData++;
         let elementType=typeof element;
         if(elementType!=='number'){
@@ -48,8 +58,9 @@ function findingBadData(array){
     }
 
 }
-// console.log(findingBadData([-4, -9, 0,-55]));
 
+/*The following Function will convert gems to diamond and
+ give result total number of diamond which we will get.*/
 function gemsToDiamond(friendOneGems,friendTwoGems,friendThreeGems){
     if( typeof friendOneGems!=='number' || typeof friendTwoGems!=='number' || typeof friendThreeGems!=='number'){
         return 'Input Should be a Number';
@@ -63,4 +74,3 @@ function gemsToDiamond(friendOneGems,friendTwoGems,friendThreeGems){
     let totalDiamond=friendOneDiamond+friendTwoDiamond+friendThreeDiamond;
     return ( (totalDiamond<2000) ? totalDiamond : (totalDiamond-2000) );
 }
-console.log(gemsToDiamond(  12*12, 1));
