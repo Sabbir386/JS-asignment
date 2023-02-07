@@ -49,3 +49,18 @@ function findingBadData(array){
 
 }
 // console.log(findingBadData([-4, -9, 0,-55]));
+
+function gemsToDiamond(friendOneGems,friendTwoGems,friendThreeGems){
+    if( typeof friendOneGems!=='number' || typeof friendTwoGems!=='number' || typeof friendThreeGems!=='number'){
+        return 'Input Should be a Number';
+    }
+    const friendOneGemsPower=21;
+    const friendTwoGemsPower=32;
+    const friendThreeGemsPower=43;
+    let friendOneDiamond=friendOneGems*friendOneGemsPower;
+    let friendTwoDiamond=friendTwoGems*friendTwoGemsPower;
+    let friendThreeDiamond=friendThreeGems*friendThreeGemsPower;
+    let totalDiamond=friendOneDiamond+friendTwoDiamond+friendThreeDiamond;
+    return ( (totalDiamond<2000) ? totalDiamond : (totalDiamond-2000) );
+}
+console.log(gemsToDiamond(  12*12, 1));
